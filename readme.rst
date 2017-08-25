@@ -3,7 +3,8 @@
 ===================
 
 This is a simple Django 1.11+ project template with my preferred setup.
-Most of my projects are deployed to AlwaysData, so hhe deployment (with fabric) is optimized for that
+
+Most of my projects are deployed to AlwaysData, so hhe deployment (with fabric) is optimized for that.
 
 Features
 ===============
@@ -17,17 +18,6 @@ Features
 - Collection of custom extensions with django-extensions.
 - PostgreSQL database support with psycopg2.
 
-How to install
-==============
-
-Todo
-====
-- secret key:  -- Translation
-               -- Fix issue if secret_key file is empty
-               -- Test
-               -- Create a specific App
-               -- PR on django-extension ?
-
 Requirements
 ============
 - Django>=1.11.0,<1.12.0
@@ -35,6 +25,16 @@ Requirements
 - django-extensions>=1.8.0,<1.9.0
 - django-debug-toolbar==1.8
 - psycopg2==2.6
+
+Todo
+====
+- secret key:  - Translation
+               - Fix issue if secret_key file is empty
+               - Test
+               - Create a specific App
+               - PR on django-extension ?
+- fabric file
+- how to
 
 Etape necessaire (à automatiser)
 ================
