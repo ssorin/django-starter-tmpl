@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8080
+    volumes:
+      - .:/code
+    ports:
+      - "8080:8080"
+  db:
+    build: .
+    image: app
+    command: python3 manage.py migrate
+    volumes:
+      - .:/code
+  pip:
+    build: .
+    command: pip install -r requirements.txt --upgrade
+    volumes:
+      - .:/code
