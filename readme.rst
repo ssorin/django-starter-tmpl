@@ -41,6 +41,7 @@ Etape necessaire (à automatiser)
 ================
 1 - clone
 2 - rename depot / project
+---
 3 - settings/env à définir
 4 - définir venv path sur serveur staging / prod
 5 - definir setting db + mail sur serveur staging / prod

@@ -4,20 +4,20 @@ from core.settings.base import *
 
 DEBUG = False
 DEBUG_TOOLBAR = False
-ALLOWED_HOSTS = []
-SITE_URL = '#####'
+ALLOWED_HOSTS = [{ALLOWED_HOSTS}]
+SITE_URL = {SITE_URL}
 
 # ==============================================================================
 # Email configuration
 # ==============================================================================
-EMAIL_HOST = '#####'
+EMAIL_HOST = {EMAIL_HOST}
 
-DEFAULT_FROM_EMAIL = '#####'
+DEFAULT_FROM_EMAIL = {DEFAULT_FROM_EMAIL}
 ADMINS = (
-    ('admin', '#####'),
+    ('admin', {ADMIN_EMAIL}),
 )
 MAIL_CLIENT = (
-    ('client', '#####'),
+    ('client', {CLIENT_EMAIL}),
 )
 MANAGERS = ADMINS
 
@@ -28,10 +28,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'HOST': '#####',
+        'HOST': {DB_HOST},
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '#####',
-        'USER': '#####',
-        'PASSWORD': '#####'
+        'NAME': {DB_NAME},
+        'USER': {DB_USER},
+        'PASSWORD': {DB_PASSWORD}
     }
 }
