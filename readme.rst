@@ -28,11 +28,12 @@ Requirements
 
 Todo
 ====
-- secret key:  - Translation
-               - Fix issue if secret_key file is empty
-               - Test
-               - Create a specific App
-               - PR on django-extension ?
+- secret key:
+    - Translation
+    - Fix issue if secret_key file is empty
+    - Test
+    - Create a specific App
+    - PR on django-extension ?
 - fabric file
 - how to
 
