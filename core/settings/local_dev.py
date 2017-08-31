@@ -37,7 +37,7 @@ MANAGERS = ADMINS
 # ==============================================================================
 # Email backend
 # ==============================================================================
-if DEBUG == True:
+if DEBUG:
     # Show emails in the console during developement.
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -45,7 +45,7 @@ if DEBUG == True:
 # ==============================================================================
 # Debug Toolbar configuration
 # ==============================================================================
-if DEBUG_TOOLBAR == True:
+if DEBUG_TOOLBAR:
     INSTALLED_APPS += ('debug_toolbar',)
     DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False}
     INTERNAL_IPS = ('127.0.0.1',)
