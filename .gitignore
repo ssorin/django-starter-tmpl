@@ -16,4 +16,6 @@ supervisord.log
 supervisord.pid
 local_prod.py
 local_recette.py
+local_staging.py
 settings/env.py
+/static/
