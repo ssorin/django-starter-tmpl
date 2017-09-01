@@ -61,4 +61,6 @@ Todo
     - Test
     - Create a specific App
     - PR on django-extension ?
-- fabfile: add try/except + add test
+- fabfile:
+    - add try/except
+    - add test
