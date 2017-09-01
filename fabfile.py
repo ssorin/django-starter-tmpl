@@ -151,7 +151,7 @@ def deploy():
     migrate()
     create_super_user()
     collectstatic()
-    print(green("Deployment successfully completed !!"))
+    print(green("DEPLOYMENT SUCCESSFULLY COMPLETED !!"))
 
 def update():
     """ Group all actions to update the project """
@@ -159,16 +159,17 @@ def update():
     install_requirements()
     migrate()
     collectstatic()
-    print(green("Successful update !!"))
+    print(green("SUCCESSFUL UPDATE !!"))
 
 
 ####################
 # Commands details #
 ####################
 def git_pull():
-    """ """
-    run('git pull origin master')
-    print green('- Git pull ok !')
+    """ pull the git deposit """
+    with cd(env.base_dir):
+        run('git pull origin master')
+    print green('- Git pull Ok !')
 
 def make_settings():
     """
@@ -202,40 +203,40 @@ def make_settings():
         with open(file_path, 'w') as file:
           file.write(filedata)
 
-        print green('- Settings file were correctly generated')
+        print green('- Generate Settings file Ok')
 
 def create_virtualenv():
     """ Create a new virtualenv """
     with prefix('WORKON_HOME=~/.virtualenvs'):
         with prefix('source ~/.local/bin/virtualenvwrapper.sh'):
             run("mkvirtualenv %s" % env.project_name)
-    print green('- virtualenv were correctly created')
+    print green('- Create virtualenv Ok')
 
 def install_requirements():
     """ Pip install of the requirements """
     with virtualenv():
         run("pip install -r requirements.txt")
-    print green('- Requirements were correctly installed')
+    print green('- Install Requirements Ok')
 
 def migrate():
     """ Migrate the db """
     """ Run South migrations """
     with virtualenv():
         run("python manage.py migrate")
-    print green('- Migration ok')
+    print green('- Migration Ok')
 
 def collectstatic():
     """ Collect static files from installed apps """
     with virtualenv():
         run("python manage.py collectstatic --noinput")
-    print green('- Collectstatic ok')
+    print green('- Collectstatic Ok')
 
 
 def create_super_user():
     """ Create super user in db"""
     with virtualenv():
         run("python manage.py createsuperuser")
-    print green('- Super user were correctly created')
+    print green('- Create Super user Ok')
 
 ###################
 # Virtualenv util #
