@@ -31,6 +31,7 @@ Getting Started
 Development environment
 -----------------------
 You have 2 choices:
+
 1) with fabric:
     - clone project
     - change git project
