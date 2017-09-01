@@ -26,6 +26,32 @@ Requirements
 - django-debug-toolbar==1.8
 - psycopg2==2.6
 
+Getting Started
+===============
+Development environment
+-----------------------
+You have 2 choices:
+1 - with fabric:
+- clone project
+- change git project
+- fab dev deploy / fab dev update
+
+2 - with docker:
+- clone project
+- change git project
+- run: docker-compose build
+- run: docker-compose up
+
+Staging environment
+-------------------
+- clone project
+- fab staging deploy / fab staging update
+
+Production environment
+----------------------
+- clone project
+- fab prod deploy / fab prod update
+
 Todo
 ====
 - secret key:
@@ -34,30 +60,5 @@ Todo
     - Test
     - Create a specific App
     - PR on django-extension ?
-- fabric file
-- how to
-
-Etape necessaire (à automatiser)
-================
-1 - clone
-2 - rename depot / project
----
-3 - settings/env à définir
-4 - définir venv path sur serveur staging / prod
-5 - definir setting db + mail sur serveur staging / prod
-6 - migrate
-7 - (create super user)
-8 - collectstatic
-
-
-Getting Started
-===============
-EN DEV
-- clone project
-- change git project
-- docker-compose build
-- docker-compose up
-
-EN PROD / Stage
-- clone project
-- run fabfile
+- fabfile: add try/except + add test
+- usage
