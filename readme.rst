@@ -31,16 +31,16 @@ Getting Started
 Development environment
 -----------------------
 You have 2 choices:
-1 - with fabric:
-- clone project
-- change git project
-- fab dev deploy / fab dev update
+1) with fabric:
+    - clone project
+    - change git project
+    - fab dev deploy / fab dev update
 
-2 - with docker:
-- clone project
-- change git project
-- run: docker-compose build
-- run: docker-compose up
+2) with docker:
+    - clone project
+    - change git project
+    - run: docker-compose build
+    - run: docker-compose up
 
 Staging environment
 -------------------
@@ -61,4 +61,3 @@ Todo
     - Create a specific App
     - PR on django-extension ?
 - fabfile: add try/except + add test
-- usage
