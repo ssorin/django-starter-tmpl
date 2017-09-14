@@ -3,14 +3,14 @@ Django>=1.10.0,<1.11.0
 django-sekizai>=0.10,<0.11
 django-extensions>=1.8.0,<1.9.0
 django-debug-toolbar==1.8
-fabric
+Fabric==1.14.0
 livereload
 
-django-cms
-django-filer
-djangocms-text-ckeditor
-djangocms-link
-djangocms-file
-djangocms-picture
-djangocms-video
-djangocms-googlemap
+django-cms>=3.4.0,<3.5.0
+django-filer==1.2.8
+djangocms-text-ckeditor==3.5.0
+djangocms-link==2.1.2
+djangocms-file==2.0.2
+djangocms-picture==2.0.5
+djangocms-video==2.0.4
+djangocms-googlemap==1.1.1

@@ -2,7 +2,8 @@
  Django Starter Tmpl
 ===================
 
-This is a simple Django 1.11+ project template with my preferred setup.
+This is a simple Django 1.11+ / or DjangoCMS project template with my preferred setup.
+Allows you to deploy either a standard django project or a django-cms project
 
 Fabric deployment is optimized for AlwaysData
 
@@ -22,6 +23,17 @@ Features
 Requirements
 ============
 - Django>=1.11.0,<1.12.0
+- django-sekizai>=0.10,<0.11
+- django-extensions>=1.8.0,<1.9.0
+- django-debug-toolbar==1.8
+- psycopg2==2.6dea
+- livereload
+
+Requirements
+============
+- Django>=1.10.0,<1.11.0
+- django-cms>=3.4.0,<3.5.0
+- django-filer==1.2.8
 - django-sekizai>=0.10,<0.11
 - django-extensions>=1.8.0,<1.9.0
 - django-debug-toolbar==1.8

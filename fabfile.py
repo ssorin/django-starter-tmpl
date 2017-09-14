@@ -42,6 +42,8 @@ from fabric.api import cd, env, run, prefix
 from fabric.operations import prompt
 from fabric.colors import green, blue, red
 
+PROJECT_TYPE_STANDARD = 0
+PROJECT_TYPE_CMS = 1
 
 #######################
 # Set parameters      #
@@ -144,6 +146,7 @@ def prod(user=None, base_dir=None, project_name=None):
 def deploy():
     """ Group all actions to deploy the project """
     git_pull()
+    make_project_structure()
     if not env.environment == "dev":
         make_settings()
     else:
@@ -178,7 +181,7 @@ def make_project_structure():
 
     base_dir = env.base_dir
 
-    if env.project_type == 0:
+    if env.project_type == PROJECT_TYPE_STANDARD:
         # standard project
         run("cp -r %s/core/project_sample/standard/apps.py %s/core/settings/apps.py" % (base_dir, base_dir))
         run("cp -r %s/core/project_sample/standard/base.py %s/core/settings/base.py" % (base_dir, base_dir))
@@ -258,7 +261,10 @@ def create_virtualenv():
 def install_requirements():
     """ Pip install of the requirements """
     with virtualenv():
-        run("pip install -r requirements.txt")
+        if env.project_type == PROJECT_TYPE_STANDARD:
+            run("pip install -r requirements.txt")
+        if env.project_type == PROJECT_TYPE_CMS:
+            run("pip install -r requirements-cms.txt")
     print green('- Install Requirements Ok')
 
 def migrate():
