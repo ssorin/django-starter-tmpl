@@ -192,7 +192,7 @@ def make_project_structure():
         # cms project
         run("cp -r %s/core/project_sample/cms/apps.py %s/core/settings/apps.py" % (base_dir, base_dir))
         run("cp -r %s/core/project_sample/cms/base.py %s/core/settings/base.py" % (base_dir, base_dir))
-        run("cp -r %s/core/project_sample/cms/urls.py %s/core/cms_toolbars.py" % (base_dir, base_dir))
+        run("cp -r %s/core/project_sample/cms/cms_toolbars.py %s/core/cms_toolbars.py" % (base_dir, base_dir))
         run("cp -r %s/core/project_sample/cms/urls.py %s/core/urls.py" % (base_dir, base_dir))
         run("rm -r %s/core/project_sample"  % base_dir)
 
