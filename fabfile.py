@@ -173,11 +173,11 @@ def update():
 
 def make_project_structure():
     """ Create a standard django project or django-cms project"""
-    env.project_type = prompt(
+    env.project_type = int(prompt(
         'Please specify the project type (default [0]) \n[0] django standard \n[1] django cms \n',
         default='0',
         validate='^[0,1]$'
-    )
+    ))
 
     base_dir = env.base_dir
 
