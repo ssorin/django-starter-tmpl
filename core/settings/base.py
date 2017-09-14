@@ -40,6 +40,7 @@ SECRET_KEY = get_secret_key('secret_key')
 # APPS CONFIGURATION
 # ==============================================================================
 DJANGO_APPS = (
+    'livereload',                   # to deactivate in prod
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
