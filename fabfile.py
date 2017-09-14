@@ -186,7 +186,7 @@ def make_project_structure():
         run("cp -r %s/core/project_sample/standard/apps.py %s/core/settings/apps.py" % (base_dir, base_dir))
         run("cp -r %s/core/project_sample/standard/base.py %s/core/settings/base.py" % (base_dir, base_dir))
         run("cp -r %s/core/project_sample/standard/urls.py %s/core/urls.py" % (base_dir, base_dir))
-        run("rm -r %s/core/project_sample/")
+        run("rm -r %s/core/project_sample"  % base_dir)
 
     else:
         # cms project
@@ -194,7 +194,7 @@ def make_project_structure():
         run("cp -r %s/core/project_sample/cms/base.py %s/core/settings/base.py" % (base_dir, base_dir))
         run("cp -r %s/core/project_sample/cms/urls.py %s/core/cms_toolbars.py" % (base_dir, base_dir))
         run("cp -r %s/core/project_sample/cms/urls.py %s/core/urls.py" % (base_dir, base_dir))
-        run("rm -r %s/core/project_sample/")
+        run("rm -r %s/core/project_sample"  % base_dir)
 
     print green('- Generate structure Ok')
 
