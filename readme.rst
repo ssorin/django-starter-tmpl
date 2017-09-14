@@ -4,7 +4,7 @@
 
 This is a simple Django 1.11+ project template with my preferred setup.
 
-Most of my projects are deployed to AlwaysData, so hhe deployment (with fabric) is optimized for that.
+Fabric deployment is optimized for AlwaysData
 
 Features
 ===============
@@ -17,6 +17,8 @@ Features
 - Debug information with django-debug-toolbar.
 - Collection of custom extensions with django-extensions.
 - PostgreSQL database support with psycopg2.
+- livereload: Application performing a LiveReload with tiny-lr once the development server is ready
+(https://github.com/Fantomas42/django-livereload).
 
 Requirements
 ============
@@ -25,21 +27,22 @@ Requirements
 - django-extensions>=1.8.0,<1.9.0
 - django-debug-toolbar==1.8
 - psycopg2==2.6
+- livereload
 
 Getting Started
 ===============
 Development environment
 -----------------------
-You have 2 choices:
+2 choices:
 
 1) with fabric:
     - clone project
-    - change git project
+    - change git remote origin
     - fab dev deploy / fab dev update
 
 2) with docker:
     - clone project
-    - change git project
+    - change git remote origin
     - run: docker-compose build
     - run: docker-compose up
 
@@ -55,12 +58,5 @@ Production environment
 
 Todo
 ====
-- secret key:
-    - Translation
-    - Fix issue if secret_key file is empty
-    - Test
-    - Create a specific App
-    - PR on django-extension ?
-- fabfile:
-    - add try/except
-    - add test
+- secret key: utils/readme.rst
+- fabfile: test
