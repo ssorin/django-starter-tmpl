@@ -17,6 +17,7 @@ supervisord.pid
 local_prod.py
 local_recette.py
 local_staging.py
+local.py
 settings/env.py
 /static/
 db.sqlite3
