@@ -146,6 +146,8 @@ def deploy():
     git_pull()
     if not env.environment == "dev":
         make_settings()
+    else:
+        make_settings_dev()
     create_virtualenv()
     install_requirements()
     migrate()
@@ -171,13 +173,24 @@ def git_pull():
         run('git pull origin master')
     print green('- Git pull Ok !')
 
+
+def make_settings_dev():
+    """
+    Creating the settings file for the desired environment
+    Copy the sample settings, rename it according to the environment, set up the necessary variables (with prompt)
+    """
+    base_dir = env.base_dir
+    run("cp -r %s/core/settings/local_sample_dev.py %s/core/settings/local.py" % (base_dir, base_dir))
+
+    print green('- Generate staging Settings file Ok')
+
 def make_settings():
     """
     Creating the settings file for the desired environment
     Copy the sample settings, rename it according to the environment, set up the necessary variables (with prompt)
     """
     base_dir = env.base_dir
-    run("cp -r %s/core/settings/local_sample.py %s/core/settings/local_%s.py" % (base_dir, base_dir, env.environment))
+    run("cp -r %s/core/settings/local_sample.py %s/core/settings/local.py" % (base_dir, base_dir))
 
     # Read in the file
     with cd(env.base_dir):
