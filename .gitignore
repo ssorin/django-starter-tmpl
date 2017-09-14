@@ -19,3 +19,4 @@ local_recette.py
 local_staging.py
 settings/env.py
 /static/
+db.sqlite3
