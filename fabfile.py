@@ -167,6 +167,36 @@ def update():
 ####################
 # Commands details #
 ####################
+
+def make_project_structure():
+    """ Create a standard django project or django-cms project"""
+    env.project_type = prompt(
+        'Please specify the project type (default [0]) \n[0] django standard \n[1] django cms \n',
+        default='0',
+        validate='^[0,1]$'
+    )
+
+    base_dir = env.base_dir
+
+    if env.project_type == 0:
+        # standard project
+        run("cp -r %s/core/project_sample/standard/apps.py %s/core/settings/apps.py" % (base_dir, base_dir))
+        run("cp -r %s/core/project_sample/standard/base.py %s/core/settings/base.py" % (base_dir, base_dir))
+        run("cp -r %s/core/project_sample/standard/urls.py %s/core/urls.py" % (base_dir, base_dir))
+        run("rm -r %s/core/project_sample/")
+
+    else:
+        # cms project
+        run("cp -r %s/core/project_sample/cms/apps.py %s/core/settings/apps.py" % (base_dir, base_dir))
+        run("cp -r %s/core/project_sample/cms/base.py %s/core/settings/base.py" % (base_dir, base_dir))
+        run("cp -r %s/core/project_sample/cms/urls.py %s/core/cms_toolbars.py" % (base_dir, base_dir))
+        run("cp -r %s/core/project_sample/cms/urls.py %s/core/urls.py" % (base_dir, base_dir))
+        run("rm -r %s/core/project_sample/")
+
+    print green('- Generate structure Ok')
+
+
+
 def git_pull():
     """ pull the git deposit """
     with cd(env.base_dir):

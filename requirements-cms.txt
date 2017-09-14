@@ -1,0 +1,16 @@
+psycopg2==2.6
+Django>=1.10.0,<1.11.0
+django-sekizai>=0.10,<0.11
+django-extensions>=1.8.0,<1.9.0
+django-debug-toolbar==1.8
+fabric
+livereload
+
+django-cms
+django-filer
+djangocms-text-ckeditor
+djangocms-link
+djangocms-file
+djangocms-picture
+djangocms-video
+djangocms-googlemap

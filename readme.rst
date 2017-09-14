@@ -25,7 +25,7 @@ Requirements
 - django-sekizai>=0.10,<0.11
 - django-extensions>=1.8.0,<1.9.0
 - django-debug-toolbar==1.8
-- psycopg2==2.6
+- psycopg2==2.6dea
 - livereload
 
 Getting Started
