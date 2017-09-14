@@ -17,8 +17,7 @@ Features
 - Debug information with django-debug-toolbar.
 - Collection of custom extensions with django-extensions.
 - PostgreSQL database support with psycopg2.
-- livereload: Application performing a LiveReload with tiny-lr once the development server is ready
-(https://github.com/Fantomas42/django-livereload).
+- livereload: Application performing a LiveReload with tiny-lr once the development server is ready (https://github.com/Fantomas42/django-livereload).
 
 Requirements
 ============
